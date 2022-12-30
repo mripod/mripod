@@ -1,0 +1,565 @@
+USE concert;
+
+--CREATE TABLE city(
+--   city_name  VARCHAR(27) NOT NULL PRIMARY KEY
+--  ,population INTEGER  NOT NULL
+--);
+--INSERT INTO city(city_name,population) VALUES ('Москва',12615);
+--INSERT INTO city(city_name,population) VALUES ('Санкт-Петербург',5384);
+--INSERT INTO city(city_name,population) VALUES ('Новосибирск',1618);
+--INSERT INTO city(city_name,population) VALUES ('Екатеринбург',1483);
+--INSERT INTO city(city_name,population) VALUES ('Нижний Новгород',1254);
+--INSERT INTO city(city_name,population) VALUES ('Казань',1252);
+--INSERT INTO city(city_name,population) VALUES ('Челябинск',1201);
+--INSERT INTO city(city_name,population) VALUES ('Омск',1165);
+--INSERT INTO city(city_name,population) VALUES ('Самара',1157);
+--INSERT INTO city(city_name,population) VALUES ('Ростов-на-Дону',1133);
+--INSERT INTO city(city_name,population) VALUES ('Уфа',1124);
+--INSERT INTO city(city_name,population) VALUES ('Красноярск',1095);
+--INSERT INTO city(city_name,population) VALUES ('Воронеж',1054);
+--INSERT INTO city(city_name,population) VALUES ('Пермь',1054);
+--INSERT INTO city(city_name,population) VALUES ('Волгоград',1013);
+--INSERT INTO city(city_name,population) VALUES ('Краснодар',918);
+--INSERT INTO city(city_name,population) VALUES ('Саратов',842);
+--INSERT INTO city(city_name,population) VALUES ('Тюмень',789);
+--INSERT INTO city(city_name,population) VALUES ('Тольятти',703);
+--INSERT INTO city(city_name,population) VALUES ('Ижевск',649);
+--INSERT INTO city(city_name,population) VALUES ('Барнаул',633);
+--INSERT INTO city(city_name,population) VALUES ('Ульяновск',628);
+--INSERT INTO city(city_name,population) VALUES ('Иркутск',623);
+--INSERT INTO city(city_name,population) VALUES ('Хабаровск',617);
+--INSERT INTO city(city_name,population) VALUES ('Ярославль',610);
+--INSERT INTO city(city_name,population) VALUES ('Владивосток',605);
+--INSERT INTO city(city_name,population) VALUES ('Махачкала',601);
+--INSERT INTO city(city_name,population) VALUES ('Томск',575);
+--INSERT INTO city(city_name,population) VALUES ('Оренбург',565);
+--INSERT INTO city(city_name,population) VALUES ('Кемерово',559);
+--INSERT INTO city(city_name,population) VALUES ('Новокузнецк',552);
+--INSERT INTO city(city_name,population) VALUES ('Рязань',540);
+--INSERT INTO city(city_name,population) VALUES ('Астрахань',534);
+--INSERT INTO city(city_name,population) VALUES ('Набережные Челны',534);
+--INSERT INTO city(city_name,population) VALUES ('Пенза',522);
+--INSERT INTO city(city_name,population) VALUES ('Киров',513);
+--INSERT INTO city(city_name,population) VALUES ('Липецк',509);
+--INSERT INTO city(city_name,population) VALUES ('Чебоксары',495);
+--INSERT INTO city(city_name,population) VALUES ('Балашиха',490);
+--INSERT INTO city(city_name,population) VALUES ('Калининград',482);
+--INSERT INTO city(city_name,population) VALUES ('Тула',479);
+--INSERT INTO city(city_name,population) VALUES ('Курск',450);
+--INSERT INTO city(city_name,population) VALUES ('Севастополь',443);
+--INSERT INTO city(city_name,population) VALUES ('Сочи',439);
+--INSERT INTO city(city_name,population) VALUES ('Ставрополь',437);
+--INSERT INTO city(city_name,population) VALUES ('Улан-Удэ',435);
+--INSERT INTO city(city_name,population) VALUES ('Тверь',421);
+--INSERT INTO city(city_name,population) VALUES ('Магнитогорск',413);
+--INSERT INTO city(city_name,population) VALUES ('Брянск',405);
+--INSERT INTO city(city_name,population) VALUES ('Иваново',405);
+--INSERT INTO city(city_name,population) VALUES ('Белгород',392);
+--INSERT INTO city(city_name,population) VALUES ('Сургут',374);
+--INSERT INTO city(city_name,population) VALUES ('Владимир',358);
+--INSERT INTO city(city_name,population) VALUES ('Нижний Тагил',352);
+--INSERT INTO city(city_name,population) VALUES ('Чита',350);
+--INSERT INTO city(city_name,population) VALUES ('Архангельск',348);
+--INSERT INTO city(city_name,population) VALUES ('Симферополь',342);
+--INSERT INTO city(city_name,population) VALUES ('Калуга',337);
+--INSERT INTO city(city_name,population) VALUES ('Смоленск',329);
+--INSERT INTO city(city_name,population) VALUES ('Волжский',324);
+--INSERT INTO city(city_name,population) VALUES ('Саранск',319);
+--INSERT INTO city(city_name,population) VALUES ('Якутск',319);
+--INSERT INTO city(city_name,population) VALUES ('Череповец',317);
+--INSERT INTO city(city_name,population) VALUES ('Курган',315);
+--INSERT INTO city(city_name,population) VALUES ('Вологда',312);
+--INSERT INTO city(city_name,population) VALUES ('Орел',312);
+--INSERT INTO city(city_name,population) VALUES ('Владикавказ',305);
+--INSERT INTO city(city_name,population) VALUES ('Подольск',304);
+--INSERT INTO city(city_name,population) VALUES ('Грозный',301);
+--INSERT INTO city(city_name,population) VALUES ('Мурманск',292);
+--INSERT INTO city(city_name,population) VALUES ('Тамбов',292);
+--INSERT INTO city(city_name,population) VALUES ('Петрозаводск',280);
+--INSERT INTO city(city_name,population) VALUES ('Стерлитамак',278);
+--INSERT INTO city(city_name,population) VALUES ('Нижневартовск',277);
+--INSERT INTO city(city_name,population) VALUES ('Кострома',276);
+--INSERT INTO city(city_name,population) VALUES ('Новороссийск',275);
+--INSERT INTO city(city_name,population) VALUES ('Йошкар-Ола',272);
+--INSERT INTO city(city_name,population) VALUES ('Химки',255);
+--INSERT INTO city(city_name,population) VALUES ('Таганрог',249);
+--INSERT INTO city(city_name,population) VALUES ('Комсомольск-на-Амуре',247);
+--INSERT INTO city(city_name,population) VALUES ('Сыктывкар',245);
+--INSERT INTO city(city_name,population) VALUES ('Нальчик',239);
+--INSERT INTO city(city_name,population) VALUES ('Нижнекамск',239);
+--INSERT INTO city(city_name,population) VALUES ('Шахты',232);
+--INSERT INTO city(city_name,population) VALUES ('Дзержинск',229);
+--INSERT INTO city(city_name,population) VALUES ('Орск',228);
+--INSERT INTO city(city_name,population) VALUES ('Братск',227);
+--INSERT INTO city(city_name,population) VALUES ('Благовещенск',226);
+--INSERT INTO city(city_name,population) VALUES ('Энгельс',226);
+--INSERT INTO city(city_name,population) VALUES ('Ангарск',225);
+--INSERT INTO city(city_name,population) VALUES ('Королев',225);
+--INSERT INTO city(city_name,population) VALUES ('Великий Новгород',224);
+--INSERT INTO city(city_name,population) VALUES ('Старый Оскол',224);
+--INSERT INTO city(city_name,population) VALUES ('Мытищи',223);
+--INSERT INTO city(city_name,population) VALUES ('Псков',210);
+--INSERT INTO city(city_name,population) VALUES ('Люберцы',207);
+--INSERT INTO city(city_name,population) VALUES ('Бийск',201);
+--INSERT INTO city(city_name,population) VALUES ('Южно-Сахалинск',201);
+--INSERT INTO city(city_name,population) VALUES ('Прокопьевск',192);
+--INSERT INTO city(city_name,population) VALUES ('Армавир',190);
+--INSERT INTO city(city_name,population) VALUES ('Балаково',188);
+--INSERT INTO city(city_name,population) VALUES ('Рыбинск',187);
+--INSERT INTO city(city_name,population) VALUES ('Абакан',186);
+--INSERT INTO city(city_name,population) VALUES ('Северодвинск',182);
+--INSERT INTO city(city_name,population) VALUES ('Норильск',181);
+--INSERT INTO city(city_name,population) VALUES ('Петропавловск-Камчатский',181);
+--INSERT INTO city(city_name,population) VALUES ('Уссурийск',173);
+--INSERT INTO city(city_name,population) VALUES ('Волгодонск',172);
+--INSERT INTO city(city_name,population) VALUES ('Красногорск',172);
+--INSERT INTO city(city_name,population) VALUES ('Сызрань',169);
+--INSERT INTO city(city_name,population) VALUES ('Каменск-Уральский',167);
+--INSERT INTO city(city_name,population) VALUES ('Новочеркасск',167);
+--INSERT INTO city(city_name,population) VALUES ('Златоуст',165);
+--INSERT INTO city(city_name,population) VALUES ('Альметьевск',157);
+--INSERT INTO city(city_name,population) VALUES ('Электросталь',157);
+--INSERT INTO city(city_name,population) VALUES ('Салават',152);
+--INSERT INTO city(city_name,population) VALUES ('Керчь',151);
+--INSERT INTO city(city_name,population) VALUES ('Миасс',151);
+--INSERT INTO city(city_name,population) VALUES ('Копейск',148);
+--INSERT INTO city(city_name,population) VALUES ('Находка',147);
+--INSERT INTO city(city_name,population) VALUES ('Пятигорск',146);
+--INSERT INTO city(city_name,population) VALUES ('Рубцовск',143);
+--INSERT INTO city(city_name,population) VALUES ('Хасавюрт',143);
+--INSERT INTO city(city_name,population) VALUES ('Березники',141);
+--INSERT INTO city(city_name,population) VALUES ('Коломна',141);
+--INSERT INTO city(city_name,population) VALUES ('Майкоп',141);
+--INSERT INTO city(city_name,population) VALUES ('Одинцово',138);
+--INSERT INTO city(city_name,population) VALUES ('Ковров',136);
+--INSERT INTO city(city_name,population) VALUES ('Домодедово',134);
+--INSERT INTO city(city_name,population) VALUES ('Кисловодск',129);
+--INSERT INTO city(city_name,population) VALUES ('Нефтекамск',129);
+--INSERT INTO city(city_name,population) VALUES ('Батайск',128);
+--INSERT INTO city(city_name,population) VALUES ('Нефтеюганск',128);
+--INSERT INTO city(city_name,population) VALUES ('Новочебоксарск',127);
+--INSERT INTO city(city_name,population) VALUES ('Дербент',125);
+--INSERT INTO city(city_name,population) VALUES ('Серпухов',125);
+--INSERT INTO city(city_name,population) VALUES ('Щелково',125);
+--INSERT INTO city(city_name,population) VALUES ('Новомосковск',123);
+--INSERT INTO city(city_name,population) VALUES ('Черкесск',123);
+--INSERT INTO city(city_name,population) VALUES ('Первоуральск',122);
+--INSERT INTO city(city_name,population) VALUES ('Назрань',120);
+--INSERT INTO city(city_name,population) VALUES ('Раменское',120);
+--INSERT INTO city(city_name,population) VALUES ('Каспийск',119);
+--INSERT INTO city(city_name,population) VALUES ('Кызыл',118);
+--INSERT INTO city(city_name,population) VALUES ('Обнинск',118);
+--INSERT INTO city(city_name,population) VALUES ('Орехово-Зуево',118);
+--INSERT INTO city(city_name,population) VALUES ('Невинномысск',117);
+--INSERT INTO city(city_name,population) VALUES ('Новый Уренгой',117);
+--INSERT INTO city(city_name,population) VALUES ('Димитровград',114);
+--INSERT INTO city(city_name,population) VALUES ('Октябрьский',114);
+--INSERT INTO city(city_name,population) VALUES ('Долгопрудный',112);
+--INSERT INTO city(city_name,population) VALUES ('Ессентуки',110);
+--INSERT INTO city(city_name,population) VALUES ('Камышин',110);
+--INSERT INTO city(city_name,population) VALUES ('Евпатория',108);
+--INSERT INTO city(city_name,population) VALUES ('Жуковский',108);
+--INSERT INTO city(city_name,population) VALUES ('Муром',108);
+--INSERT INTO city(city_name,population) VALUES ('Новошахтинск',108);
+--INSERT INTO city(city_name,population) VALUES ('Пушкино',107);
+--INSERT INTO city(city_name,population) VALUES ('Реутов',107);
+--INSERT INTO city(city_name,population) VALUES ('Северск',107);
+--INSERT INTO city(city_name,population) VALUES ('Артем',106);
+--INSERT INTO city(city_name,population) VALUES ('Ноябрьск',106);
+--INSERT INTO city(city_name,population) VALUES ('Ачинск',105);
+--INSERT INTO city(city_name,population) VALUES ('Арзамас',104);
+--INSERT INTO city(city_name,population) VALUES ('Бердск',104);
+--INSERT INTO city(city_name,population) VALUES ('Елец',103);
+--INSERT INTO city(city_name,population) VALUES ('Элиста',103);
+--INSERT INTO city(city_name,population) VALUES ('Ногинск',102);
+--INSERT INTO city(city_name,population) VALUES ('Сергиев Посад',102);
+--INSERT INTO city(city_name,population) VALUES ('Новокуйбышевск',101);
+--INSERT INTO city(city_name,population) VALUES ('Железногорск (Курская обл.)',100);
+
+--UPDATE city
+--SET population = population * 1000;
+
+--ALTER TABLE [dbo].[city]
+--ADD country VARCHAR(30);
+
+--UPDATE [dbo].[city]
+--SET [country] = 'russia';
+
+--INSERT INTO city(city_name,population) VALUES ('Тель-Авив','443939');
+--INSERT INTO city(city_name,population) VALUES ('Хайфа','281087');
+--INSERT INTO city(city_name,population) VALUES ('Петах-Тиква','240357');
+--INSERT INTO city(city_name,population) VALUES ('Ашдод','222883');
+--INSERT INTO city(city_name,population) VALUES ('Нетания','214101');
+--INSERT INTO city(city_name,population) VALUES ('Беэр-Шева','207551');
+--INSERT INTO city(city_name,population) VALUES ('Бней-Брак','193774');
+--INSERT INTO city(city_name,population) VALUES ('Холон','192624');
+--INSERT INTO city(city_name,population) VALUES ('Рамат-Ган','156277');
+--INSERT INTO city(city_name,population) VALUES ('Реховот','138379');
+--INSERT INTO city(city_name,population) VALUES ('Ашкелон','137945');
+--INSERT INTO city(city_name,population) VALUES ('Бат-Ям','128655');
+--INSERT INTO city(city_name,population) VALUES ('Бейт-Шемеш','114371');
+--INSERT INTO city(city_name,population) VALUES ('Кфар-Сава','100039');
+
+--INSERT INTO city(city_name,population) VALUES ('Алма-Ата','1534353');
+--INSERT INTO city(city_name,population) VALUES ('Астана','844930');
+--INSERT INTO city(city_name,population) VALUES ('Шымкент','704983');
+--INSERT INTO city(city_name,population) VALUES ('Караганда','489355');
+--INSERT INTO city(city_name,population) VALUES ('Актюбинск','385438');
+--INSERT INTO city(city_name,population) VALUES ('Тараз','355682');
+--INSERT INTO city(city_name,population) VALUES ('Павлодар','332062');
+--INSERT INTO city(city_name,population) VALUES ('Усть-Каменогорск','316093');
+--INSERT INTO city(city_name,population) VALUES ('Семея','312986');
+--INSERT INTO city(city_name,population) VALUES ('Уральск','230354');
+--INSERT INTO city(city_name,population) VALUES ('Костанай','225464');
+--INSERT INTO city(city_name,population) VALUES ('Кызылорд','218300');
+--INSERT INTO city(city_name,population) VALUES ('Петропавловск','208979');
+--INSERT INTO city(city_name,population) VALUES ('Атырау','202026');
+--INSERT INTO city(city_name,population) VALUES ('Актау','182033');
+--INSERT INTO city(city_name,population) VALUES ('Темиртау','176865');
+--INSERT INTO city(city_name,population) VALUES ('Туркестан','157399');
+--INSERT INTO city(city_name,population) VALUES ('Кокшетау','141396');
+--INSERT INTO city(city_name,population) VALUES ('Талдыкорган','137654');
+--INSERT INTO city(city_name,population) VALUES ('Экибастуз','132075');
+--INSERT INTO city(city_name,population) VALUES ('Рудного','114725');
+--INSERT INTO city(city_name,population) VALUES ('Жанаозен','110272');
+
+--INSERT INTO city(country,city_name,population) VALUES ('belarus','Минск','1949059');
+--INSERT INTO city(country,city_name,population) VALUES ('belarus','Гомель','526873');
+--INSERT INTO city(country,city_name,population) VALUES ('belarus','Могилёв','374644');
+--INSERT INTO city(country,city_name,population) VALUES ('belarus','Витебск','373764');
+--INSERT INTO city(country,city_name,population) VALUES ('belarus','Гродно','361358');
+--INSERT INTO city(country,city_name,population) VALUES ('belarus','Брест','337428');
+--INSERT INTO city(country,city_name,population) VALUES ('belarus','Бобруйск','217127');
+--INSERT INTO city(country,city_name,population) VALUES ('belarus','Барановичи','170685');
+--INSERT INTO city(country,city_name,population) VALUES ('belarus','Борисов','145659');
+--INSERT INTO city(country,city_name,population) VALUES ('belarus','Пинск','135619');
+--INSERT INTO city(country,city_name,population) VALUES ('belarus','Орша','116611');
+--INSERT INTO city(country,city_name,population) VALUES ('belarus','Мозырь','111324');
+--INSERT INTO city(country,city_name,population) VALUES ('belarus','Новополоцк','108176');
+--INSERT INTO city(country,city_name,population) VALUES ('belarus','Солигорск','104745');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Киев','2888470');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Харьков','1444540');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Одесса','1010000');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Днепропетровск','984423');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Донецк','932562');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Запорожье','758011');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Львов','728545');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Кривой Рог','646748');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Николаев','494381');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Мариуполь','458533');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Луганск','417990');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Севастополь','412630');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Винница','372432');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Макеевка','348173');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Симферополь','332608');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Херсон','296161');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Полтава','294695');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Чернигов','294522');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Черкассы','284459');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Сумы','268409');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Житомир','268000');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Хмельницкий','267891');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Черновцы','264427');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Горловка','250991');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Ровно','249477');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Днепродзержинск','240477');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Кировоград','232052');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Ивано-Франковск','229447');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Кременчуг','224997');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Тернополь','217950');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Луцк','217082');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Белая Церковь','211080');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Краматорск','160895');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Мелитополь','156719');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Керчь','147668');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Северодонецк','130000');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Красный Луч','124000');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Никополь','119627');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Бердянск','115476');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Славянск','115421');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Ужгород','115195');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Алчевск','111360');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Павлоград','110144');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Евпатория','106115');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Лисичанск','103459');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Каменец-Подольский','101590');
+--INSERT INTO city(country,city_name,population) VALUES ('ukraine','Бровары','100374');
+
+
+--UPDATE city
+--SET country = 'kazakhstan'
+--WHERE country IS NULL;
+
+--UPDATE city
+--SET country = 'israel'
+--WHERE country IS NULL
+
+--CREATE TABLE type_show (
+--type_id int NOT NULL IDENTITY(1,1) PRIMARY KEY
+--, show_name VARCHAR(30)
+--);
+--INSERT INTO  [dbo].[type_show] (show_name)
+--VALUES ('concert')
+--,('clubshow')
+--, ('festival')
+--, ('private')
+--;
+
+--SELECT * FROM [dbo].[type_show]
+
+--CREATE TABLE detirave(
+--	concert_id int NOT NULL IDENTITY(1,1)
+--  ,city         VARCHAR(15) NOT NULL
+--  ,show_date    DATE NOT NULL
+--  ,name_concert VARCHAR(14)
+--  ,place        VARCHAR(14)
+--  ,artist       VARCHAR(4) NOT NULL
+--  ,organizer    VARCHAR(30)
+--  ,categories   VARCHAR(30) 
+--);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','10.09.2020 0:00',NULL,'Джипси','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Владивосток','14.10.2020 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Хабаровск','15.10.2020 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Комсомольск','16.10.2020 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('дей офф','17.10.2020 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Благовещенск','18.10.2020 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Санкт-Петербург','27.11.2020 0:00','BGRN фестиваль',NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Воронеж','26.03.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Краснодар','27.03.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Ростов-на-Дону','28.03.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Брянск','03.04.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Орел','04.04.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Тула','06.04.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Зеленоград','07.04.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Владимир','08.04.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Ярославль','09.04.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Иваново','11.04.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Нижний Новгород','13.04.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Казань','15.04.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Самара','17.04.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','22.08.2020 0:00','BGRN фестиваль',NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Воронеж','12.06.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Ростов-на-Дону','13.06.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Краснодар','14.06.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Минск','17.06.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Киев','18.06.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Варшава','19.06.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Липецк','26.06.2021 0:00','Рок Фокс фест',NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','01.09.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Омск','08.09.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Уфа','14.09.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Йошкар-Ола','17.09.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Пенза','18.09.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Тамбов','20.09.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Саратов','26.09.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Иркутск','07.10.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Хабаровск','08.10.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Владивосток','10.10.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','16.10.2021 0:00','Рашн стайл',NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Артист занят','02.11.2021 0:00',NULL,NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','25.11.2021 0:00',NULL,'Мутабор','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Санкт-Петербург','03.12.2021 0:00',NULL,'Акакао','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Чебоксары','10.12.2021 0:00',NULL,'Газировка','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Минск','05.02.2022 0:00',NULL,'Репаблик','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Нижний Новгород','16.04.2022 0:00',NULL,'Milo','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Волгоград','01.05.2022 0:00',NULL,'Порт','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Саратов','02.05.2022 0:00',NULL,'Onyx','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Тольятти','03.05.2022 0:00',NULL,'Maison','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Пенза','05.05.2022 0:00',NULL,'Izum Hall','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Йошкар ола','06.05.2022 0:00',NULL,'Stone','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Пермь','07.05.2022 0:00',NULL,'Мичурин','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Уфа','09.05.2022 0:00',NULL,'Тинькофф холл','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Челябинск','11.05.2022 0:00',NULL,'OZZ','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Екатеринбург','12.05.2022 0:00',NULL,'Телеклуб','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Омск','13.05.2022 0:00',NULL,'Ангар','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Тюмень','14.05.2022 0:00',NULL,'Дом культуры','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Новосибирск','16.05.2022 0:00',NULL,'Подземка','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Красноярск','17.05.2022 0:00',NULL,'Circus','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Иркутск','25.05.2022 0:00',NULL,'Дикая лошадь','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Хабаровск','27.05.2022 0:00',NULL,'Loona','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Владивосток','28.05.2022 0:00',NULL,'America','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Рязань','30.05.2022 0:00',NULL,'Deep Club','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Тверь','31.05.2022 0:00',NULL,'собака милле','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Смоленск','01.06.2022 0:00',NULL,'А club','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Санкт-Петербург','11.06.2022 0:00','Отличный fest',NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Санкт-Петербург','23.07.2022 0:00','VK Fest',NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','24.07.2022 0:00','VK Fest',NULL,'ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Санкт-Петербург','28.08.2022 0:00','Море Фест','Флагшток','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','18.09.2022 0:00','Турбо фест','Главклуб','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Нижний Новгород','27.10.2022 0:00',NULL,'Milo','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Казань','29.10.2022 0:00',NULL,'Big Twin Arena','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Самара','30.10.2022 0:00',NULL,'Звезда','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Воронеж','04.11.2022 0:00',NULL,'Aura','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Тула','05.11.2022 0:00',NULL,'Backstage','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Новосибирск','10.11.2022 0:00',NULL,'Подземка','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Екатеринбург','13.11.2022 0:00',NULL,'Свобода','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Санкт-Петербург','02.12.2022 0:00',NULL,'Аврора','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','10.12.2022 0:00',NULL,'Главклуб','ДЕТИ',NULL,NULL);
+--INSERT INTO detirave(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Бережки','17.06.2023 0:00','Свадьба','Villa Michetti','ДЕТИ',NULL,NULL);
+
+--UPDATE detirave
+--SET city = (
+--	SELECT city_name FROM city WHERE city_name LIKE '%ошкар%' 
+--	)
+--WHERE 
+--	city= 'Йошкар ола';
+
+--CREATE TABLE dora(
+--	concert_id int NOT NULL IDENTITY(1,1)
+--  ,city         VARCHAR(30) NOT NULL
+--  ,show_date    DATE NOT NULL
+--  ,name_concert VARCHAR(30)
+--  ,place        VARCHAR(30)
+--  ,artist       VARCHAR(30) NOT NULL
+--  ,organizer    VARCHAR(30)
+--  ,categories   VARCHAR(30) 
+--);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Самара','08.03.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Минск','13.03.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Калининград','14.03.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Барнаул','19.03.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Новосибирск','20.03.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Красноярск','21.03.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Томск','22.03.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Харьков','14.05.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Волгоград','17.05.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Ярославль','21.05.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Вологда','22.05.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Череповец','23.05.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Нижний Новгород','11.07.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Воронеж','16.07.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Ростов на Дону','17.07.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Краснодар','18.07.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Тверь','29.08.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Зарядье','06.09.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','01.10.2020 0:00',NULL,'Джипси','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Владивосток','14.10.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Хабаровск','15.10.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Комсомольск-на-Амуре','16.10.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Благовещенск','18.10.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Иваново','28.10.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Ярославль','29.10.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Вологда','30.10.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Череповец','31.10.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Петрозаводск','28.11.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','19.12.2020 0:00','МТС',NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Чебоксары','25.12.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Йошкар-Ола','26.12.2020 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Санкт-Петербург','05.02.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Тула','12.02.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Рязань','13.02.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Нижний Новгород','14.02.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Йошкар-Ола','19.02.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Чебоксары','20.02.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Чита','03.03.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Иркутск','05.03.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Сыктывкар','07.03.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Архангельск','08.03.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','14.03.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Казань','16.03.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Самара','17.03.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Уфа','19.03.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Пермь','20.03.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Екатеринбург','22.03.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Челябинск','23.03.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Тюмень','24.03.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Омск','26.03.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Новосибирск','27.03.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Томск','28.03.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Кемерово','30.03.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Барнаул','31.03.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Санкт-Петербург','05.04.2021 0:00',NULL,'Зенит Арена','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Красноясрк','07.04.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Абакан','08.04.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Пенза','10.04.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Саратов','11.04.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Волгоград','13.04.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Воронеж','14.04.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Ростов-на-Дону','16.04.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Краснодар','17.04.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Ставрополь','18.04.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Смоленск','20.04.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Орел','23.04.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Ижевск','29.04.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Петрозаводск','14.05.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Архангельск','16.05.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Минск','30.05.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','31.05.2021 0:00','Glamour Influencers awards',NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Санкт-Петербург','03.06.2021 0:00',NULL,'ДЛТ','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Киев','11.06.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Одесса','12.06.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Липецк','27.06.2021 0:00','Fox rock fest',NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Сыктывкар','20.07.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Сочи','12.08.2021 0:00',NULL,'Ривьера парк','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Анапа','13.08.2021 0:00',NULL,'Летняя эстрада','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Новороссийск','14.08.2021 0:00',NULL,'Ангар','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Киев','12.09.2021 0:00','фестиваль',NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','25.09.2021 0:00','Locals Only',NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','12.11.2021 0:00',NULL,'Джипси','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','24.11.2021 0:00','Корейский фестиваль','Main Stage','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Минск','25.11.2021 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','27.11.2021 0:00',NULL,'Профсоюз','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Ставрополь','18.02.2022 0:00',NULL,'Форбс','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Краснодар','19.02.2022 0:00',NULL,'Кроп','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Воронеж','20.02.2022 0:00',NULL,'Palazzo','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Омск','01.04.2022 0:00',NULL,'Ангар','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Тюмень','02.04.2022 0:00',NULL,'Дом Культуры','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Челябинск','04.04.2022 0:00',NULL,'Конгресс-холл','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Екатеринбург','05.04.2022 0:00',NULL,'Свобода','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Пермь','06.04.2022 0:00',NULL,'Свобода','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Казань','08.04.2022 0:00',NULL,'Big Twin Arena','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Ижевск','09.04.2022 0:00',NULL,'Атом Холл','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Уфа','10.04.2022 0:00',NULL,'Тинькофф-Холл','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Самара','12.04.2022 0:00',NULL,'Звезда','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Саратов','13.04.2022 0:00',NULL,'Onyx','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Иркутск','16.04.2022 0:00',NULL,'Дикая Лошадь','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Красноярск','17.04.2022 0:00',NULL,'Circus','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Нижний Новгород','21.04.2022 0:00',NULL,'Milo Concert Hall','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Чебоксары','22.04.2022 0:00',NULL,'Gazirovka','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Калининград','28.04.2022 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','29.04.2022 0:00',NULL,'Главклуб','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Оренбург','01.05.2022 0:00',NULL,'Studio','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Томск','06.05.2022 0:00',NULL,'Район','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Барнаул','07.05.2022 0:00',NULL,'Че Гевара','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Новосибирск','08.05.2022 0:00',NULL,'Подземка','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Мурманск','13.05.2022 0:00',NULL,'ZALL','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Архангельск','15.05.2022 0:00',NULL,'М33','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Санкт-Петербург','20.05.2022 0:00',NULL,'Морзе','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','22.05.2022 0:00',NULL,'Ровесник','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Волгоград','25.05.2022 0:00',NULL,'Филинн','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Ростов','26.05.2022 0:00',NULL,'Кроп-Арена','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Белгород','28.05.2022 0:00',NULL,'Under','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Липецк','29.05.2022 0:00',NULL,'Мегаполис','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Курск','30.05.2022 0:00',NULL,'Матрица','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Южно-Сахалинск','01.06.2022 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Владивосток','02.06.2022 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Хабаровск','03.06.2022 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Петропавловск-Камчатский','05.06.2022 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Санкт-Петербург','12.06.2022 0:00','Отличный Fest',NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','27.07.2022 0:00','Summer Sound','Флакон','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Алматы','29.07.2022 0:00',NULL,'Мотор','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Нур Султан','31.07.2022 0:00',NULL,'the Bus','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Геленджик','09.08.2022 0:00',NULL,'Олимп','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','29.08.2022 0:00',NULL,'Заварка','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Лимасол','12.11.2022 0:00',NULL,NULL,'ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Санкт-Петербург','23.12.2022 0:00',NULL,'Морзе','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','07.01.2023 0:00',NULL,'Атмосфера','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Тель-Авив','13.02.2023 0:00',NULL,'Gagarin','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Санкт-Петербург','21.04.2023 0:00',NULL,'А2','ДОРА',NULL,NULL);
+--INSERT INTO dora(city,show_date,name_concert,place,artist,organizer,categories) VALUES ('Москва','23.04.2023 0:00',NULL,'Атмосфера','ДОРА',NULL,NULL);
+
+
+--UPDATE dora 
+--SET city = (
+--	SELECT city_name FROM city WHERE  city_name LIKE '%алма%'
+--	)
+--WHERE
+--	city = 'Алматы';
+
+--UPDATE dora
+--SET city = 'Ростов-на-Дону'
+--WHERE concert_id = 114
+--UPDATE dora
+--SET city = 'Ростов-на-Дону'
+--WHERE concert_id = 15;
+--GO
